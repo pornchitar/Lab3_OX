@@ -29,7 +29,14 @@ public class Lab3 {
         return true;
     }
     
-    
+    public static boolean checkColumns(String[][] board,String turn,int row) {
+        for (int j = 0; j < board[0].length; j++) {
+            if (board[0][j].equals(turn.toUpperCase()) && board[1][j].equals(turn.toUpperCase()) && board[2][j].equals(turn.toUpperCase())) {
+                return true;
+            }
+        }
+        return false;
+    }
 
     public static void main(String[] args) {
         System.out.println("Hello World!");

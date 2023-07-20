@@ -38,7 +38,7 @@ public class TestLab3 {
     public void tearDown() {
     }
     @Test
-    public void text(){
+    public void testXWinInRow1(){
         String [][] board = {{"X","X","X"},{"-","-","-"},{"-","-","-"}};
         String turn = "X";
         int row = 1;
@@ -91,6 +91,32 @@ public class TestLab3 {
         assertEquals(true, Lab3.checkRows(board, turn, row));
     }
 
+    @Test
+    public void testXWinInCol1(){
+        String [][] board = {{"X","-","-"},{"X","-","-"},{"X","-","-"}};
+        String turn = "X";
+        int row = 1;
+        Lab3.checkColumns(board, turn, row);
+        assertEquals(true, Lab3.checkColumns(board, turn, row));
+    }
+
+    @Test
+    public void testXWinInCol2(){
+        String [][] board = {{"-","X","-"},{"-","X","-"},{"-","X","-"}};
+        String turn = "X";
+        int row = 2;
+        Lab3.checkColumns(board, turn, row);
+        assertEquals(true, Lab3.checkColumns(board, turn, row));
+    }
+
+    @Test
+    public void testXWinInCol3(){
+        String [][] board = {{"-","-","X"},{"-","-","X"},{"-","-","X"}};
+        String turn = "X";
+        int row = 3;
+        Lab3.checkColumns(board, turn, row);
+        assertEquals(true, Lab3.checkColumns(board, turn, row));
+    }
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:
     //
