@@ -46,6 +46,15 @@ public class TestLab3 {
         assertEquals(true, Lab3.checkRows(board, turn, row));
     }
 
+    @Test
+    public void testXWinInRow3(){
+        String [][] board = {{"-","-","-"},{"-","-","-"},{"X","X","X"}};
+        String turn = "X";
+        int row = 2;
+        Lab3.checkRows(board, turn, row);
+        assertEquals(true, Lab3.checkRows(board, turn, row));
+    }
+
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:
     //
