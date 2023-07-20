@@ -95,27 +95,54 @@ public class TestLab3 {
     public void testXWinInCol1(){
         String [][] board = {{"X","-","-"},{"X","-","-"},{"X","-","-"}};
         String turn = "X";
-        int row = 1;
-        Lab3.checkColumns(board, turn, row);
-        assertEquals(true, Lab3.checkColumns(board, turn, row));
+        int col = 1;
+        Lab3.checkColumns(board, turn, col);
+        assertEquals(true, Lab3.checkColumns(board, turn, col));
     }
 
     @Test
     public void testXWinInCol2(){
         String [][] board = {{"-","X","-"},{"-","X","-"},{"-","X","-"}};
         String turn = "X";
-        int row = 2;
-        Lab3.checkColumns(board, turn, row);
-        assertEquals(true, Lab3.checkColumns(board, turn, row));
+        int col = 2;
+        Lab3.checkColumns(board, turn, col);
+        assertEquals(true, Lab3.checkColumns(board, turn, col));
     }
 
     @Test
     public void testXWinInCol3(){
         String [][] board = {{"-","-","X"},{"-","-","X"},{"-","-","X"}};
         String turn = "X";
-        int row = 3;
-        Lab3.checkColumns(board, turn, row);
-        assertEquals(true, Lab3.checkColumns(board, turn, row));
+        int col = 3;
+        Lab3.checkColumns(board, turn, col);
+        assertEquals(true, Lab3.checkColumns(board, turn, col));
+    }
+
+    @Test
+    public void testOWinInCol1(){
+        String [][] board = {{"O","-","-"},{"O","-","-"},{"O","-","-"}};
+        String turn = "O";
+        int col = 1;
+        Lab3.checkColumns(board, turn, col);
+        assertEquals(true, Lab3.checkColumns(board, turn, col));
+    }
+
+    @Test
+    public void testOWinInCol2(){
+        String [][] board = {{"-","O","-"},{"-","O","-"},{"-","O","-"}};
+        String turn = "O";
+        int col = 2;
+        Lab3.checkColumns(board, turn, col);
+        assertEquals(true, Lab3.checkColumns(board, turn, col));
+    }
+
+    @Test
+    public void testOWinInCol3(){
+        String [][] board = {{"-","-","O"},{"-","-","O"},{"-","-","O"}};
+        String turn = "O";
+        int col = 3;
+        Lab3.checkColumns(board, turn, col);
+        assertEquals(true, Lab3.checkColumns(board, turn, col));
     }
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:
