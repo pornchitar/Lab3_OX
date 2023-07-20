@@ -64,6 +64,33 @@ public class TestLab3 {
         assertEquals(true, Lab3.checkRows(board, turn, row));
     }
 
+    @Test
+    public void testOWinInRow1(){
+        String [][] board = {{"O","O","O"},{"-","-","-"},{"-","-","-"}};
+        String turn = "O";
+        int row = 1;
+        Lab3.checkRows(board, turn, row);
+        assertEquals(true, Lab3.checkRows(board, turn, row));
+    }
+    
+    @Test
+    public void testOWinInRow2(){
+        String [][] board = {{"-","-","-"},{"O","O","O"},{"-","-","-"}};
+        String turn = "O";
+        int row = 2;
+        Lab3.checkRows(board, turn, row);
+        assertEquals(true, Lab3.checkRows(board, turn, row));
+    }
+    
+    @Test
+    public void testOWinInRow3(){
+        String [][] board = {{"-","-","-"},{"-","-","-"},{"O","O","O"}};
+        String turn = "O";
+        int row = 3;
+        Lab3.checkRows(board, turn, row);
+        assertEquals(true, Lab3.checkRows(board, turn, row));
+    }
+
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:
     //
