@@ -47,10 +47,19 @@ public class TestLab3 {
     }
 
     @Test
+    public void testXWinInRow2(){
+        String [][] board = {{"-","-","-"},{"X","X","X"},{"-","-","-"}};
+        String turn = "X";
+        int row = 2;
+        Lab3.checkRows(board, turn, row);
+        assertEquals(true, Lab3.checkRows(board, turn, row));
+    }
+
+    @Test
     public void testXWinInRow3(){
         String [][] board = {{"-","-","-"},{"-","-","-"},{"X","X","X"}};
         String turn = "X";
-        int row = 2;
+        int row = 3;
         Lab3.checkRows(board, turn, row);
         assertEquals(true, Lab3.checkRows(board, turn, row));
     }
