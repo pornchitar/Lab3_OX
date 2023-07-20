@@ -144,6 +144,46 @@ public class TestLab3 {
         Lab3.checkColumns(board, turn, col);
         assertEquals(true, Lab3.checkColumns(board, turn, col));
     }
+
+    @Test
+    public void testXWinInDiagonals1(){
+        String [][] board = {{"X","-","-"},{"-","X","-"},{"-","-","X"}};
+        String turn = "X";
+        int col = 1;
+        int row = 1;
+        Lab3.checkDiagonals(board, turn,row, col );
+        assertEquals(true, Lab3.checkDiagonals(board, turn,row, col));
+    }
+
+    @Test
+    public void testXWinInDiagonals2(){
+        String [][] board = {{"-","-","X"},{"-","X","-"},{"X","-","-"}};
+        String turn = "X";
+        int col = 3;
+        int row = 1;
+        Lab3.checkDiagonals(board, turn, col, row);
+        assertEquals(true, Lab3.checkDiagonals(board, turn, col, row));
+    }
+
+    @Test
+    public void testOWinInDiagonals1(){
+        String [][] board = {{"O","-","-"},{"-","O","-"},{"-","-","O"}};
+        String turn = "O";
+        int col = 1;
+        int row = 1;
+        Lab3.checkDiagonals(board, turn, col, row);
+        assertEquals(true, Lab3.checkDiagonals(board, turn, col, row));
+    }
+
+    @Test
+    public void testOWinInDiagonals2(){
+        String [][] board = {{"-","-","O"},{"-","O","-"},{"O","-","-"}};
+        String turn = "O";
+        int col = 3;
+        int row = 1;
+        Lab3.checkDiagonals(board, turn, col, row);
+        assertEquals(true, Lab3.checkDiagonals(board, turn, col, row));
+    }
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:
     //

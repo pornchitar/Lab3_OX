@@ -38,6 +38,18 @@ public class Lab3 {
         return false;
     }
 
+    public static boolean checkDiagonals(String[][] board,String turn,int row, int col) {
+        if (board[0][0].equals(turn.toUpperCase()) && board[1][1].equals(turn.toUpperCase()) && board[2][2].equals(turn.toUpperCase())) {
+            return true;
+        }
+
+        if (board[0][2].equals(turn.toUpperCase()) && board[1][1].equals(turn.toUpperCase()) && board[2][0].equals(turn.toUpperCase())) {
+            return true;
+        }
+
+        return false;
+    }
+
     public static void main(String[] args) {
         System.out.println("Hello World!");
     }
