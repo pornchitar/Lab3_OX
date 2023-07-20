@@ -50,6 +50,17 @@ public class Lab3 {
         return false;
     }
 
+    public static boolean checkDraw(String[][] board,String turn,int row, int col) {
+        for (int i = 0; i < board.length; i++) {
+            for (int j = 0; j < board.length; j++) {
+                if (board[i][j].equals("_")) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+    
     public static void main(String[] args) {
         System.out.println("Hello World!");
     }

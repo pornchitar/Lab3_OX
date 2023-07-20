@@ -184,6 +184,16 @@ public class TestLab3 {
         Lab3.checkDiagonals(board, turn, col, row);
         assertEquals(true, Lab3.checkDiagonals(board, turn, col, row));
     }
+
+    @Test
+    public void testDraw(){
+        String [][] board = {{"X","O","X"},{"X","O","X"},{"O","X","O"}};
+        String turn = "X";
+        int col = 1;
+        int row = 1;
+        Lab3.checkDraw(board, turn, col, row);
+        assertEquals(true, Lab3.checkDraw(board, turn, col, row));
+    }
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:
     //
